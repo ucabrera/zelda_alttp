@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CTF Challenge</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      #secretText {
+        display: none;
+        color: red;
+        font-weight: bold;
+      }
+
+      button {
+        padding: 10px 20px;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Zelda challenge</h1>
+    <img src="./zelda.jpg" alt="CTF Challenge Image" />
+    <p>This is my favorite Zelda game</p>
+    <button onclick="toggleText()">Show/Hide Text</button>
+    <p id="secretText">
+      <a href="flag.txt" target="_blank">View the flag</a>
+    </p>
+
+    <script>
+      function toggleText() {
+        const text = document.getElementById("secretText");
+        text.style.display = text.style.display === "none" ? "block" : "none";
+      }
+    </script>
+  </body>
+</html>
